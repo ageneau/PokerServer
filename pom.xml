@@ -89,12 +89,12 @@
         <artifactId>javassist</artifactId>
         <version>3.12.1.GA</version>
     </dependency>
-	<!-- MySQL database driver -->
-	<dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-		<version>5.1.22</version>
-	</dependency>
+    <!-- PostGres database driver -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.5</version>
+    </dependency>
 	<!-- Servlet -->
 	<dependency>
 		<groupId>javax.servlet</groupId>

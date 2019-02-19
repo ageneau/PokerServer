@@ -1,14 +1,13 @@
 db:
-  image: mariadb/server:latest
+  image: postgres:alpine
   environment:
-    MARIADB_ROOT_PASSWORD: nimda
-    MARIADB_DATABASE: poker
-    MARIADB_USER: dbuser
-    MARIADB_PASSWORD: dbuserpass
+    POSTGRES_DB: poker
+    POSTGRES_USER: dbuser
+    POSTGRES_PASSWORD: dbuserpass
   ports:
-   - "3306:3306"
+   - "5432:5432"
   volumes:
-   - ./script:/docker-entrypoint-initdb.d
+   - ./db:/docker-entrypoint-initdb.d
 
 web:
   image: tomcat:9

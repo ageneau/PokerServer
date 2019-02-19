@@ -1,0 +1,4 @@
+load database
+     from mysql://dbuser:dbuserpass@0.0.0.0/poker
+     into pgsql://dbuser:dbuserpass@0.0.0.0/poker
+     alter schema 'poker' rename to 'public';

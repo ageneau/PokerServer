@@ -12,7 +12,7 @@
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<prop key="batch_size">15</prop>
 				<prop key="fetch_size">30</prop>
 				<prop key="hbm2ddl.auto">false</prop>
@@ -28,8 +28,8 @@
 	
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://db:3306/poker" />
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://db:5432/poker" />
 		<property name="username" value="dbuser" />
 		<property name="password" value="dbuserpass" />
 	</bean>
